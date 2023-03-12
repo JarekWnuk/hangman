@@ -45,3 +45,26 @@ print("Oops! That is not a valid input.")
 
 The game needs a way to handle incorrect user input. Currently the code stops with a message to the user.
 The correct way to improve this would be to set up a loop that asks for user input until it is valid.
+
+# Milestone 3
+
+In this milestone two functions are added to the game that improve the logic and make the code more tidy. Details are described below:
+
+- function ask_for_input() adds a while loop to the existing code used to check user input in Milestone 2. Now, if the input is invalid the code loops to the input request until a valid input is received.
+This is achieved by adding a infinite while loop and breaking out once the required condition is met. See the explained code below:
+
+While True: # While loop with condition True is infinite 
+  get user input
+  if user input is valid
+    break out of infinite While loop
+  otherwise 
+    print message to user and loop
+
+- the check_guess function takes the letter guessed by the player as an argument and does the following:
+
+uses .lower() string function on guess in case a capital letter has been enetered
+
+
+
+checks if the guessed letter is in the secret word
+ 
