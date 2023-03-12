@@ -60,11 +60,20 @@ While True: # While loop with condition True is infinite
   otherwise 
     print message to user and loop
 
-- the check_guess function takes the letter guessed by the player as an argument and does the following:
+- The check_guess function takes the letter guessed by the player as an argument and does the following:
 
 uses .lower() string function on guess in case a capital letter has been enetered
 
+	guess_lower = guess.lower()
 
+checks if the letter is in the secret word
 
-checks if the guessed letter is in the secret word
+	if guess_lower in word:
  
+different messages are printed depending on the outcome of the check
+
+- The check_guess function explained above is included at the end of the  ask_for_input function
+ 
+# Conclusion
+Including the check_guess function in the body of the ask_for_input function allows to achieve both input validation and check against the secret word within one block of code.
+Game can only check the guess one time so far. It needs tho include multiple guesses with some limit (difficulty level?).
