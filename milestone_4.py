@@ -24,5 +24,4 @@ class Hangman:
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
-player_1 = Hangman(["apple"])
-player_1.ask_for_input()
+                break
