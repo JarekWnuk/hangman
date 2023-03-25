@@ -3,11 +3,10 @@ word_list = ["watermelon", "nectarine", "strawberry", "kiwi", "raspberry"]
 word = random.choice(word_list)
 
 def check_guess(guess):
-    guess_lower = guess.lower()
-    if guess_lower in word:
-        print(f"Good guess! {guess_lower} is in the word.")
+    if guess.lower() in word:
+        print(f"Good guess! {guess.lower()} is in the word.")
     else:
-        print(f"Sorry, {guess_lower} is not in the word. Try again.")
+        print(f"Sorry, {guess.lower()} is not in the word. Try again.")
 
 def ask_for_input():
     while True:
