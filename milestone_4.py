@@ -12,15 +12,15 @@ class Hangman:
 
     def check_guess(self, guess):
         if guess.lower() in self.word:
-            print(f"Good guess! {guess.lower()} is in the word.\n")
+            print(f"Good guess! {guess.lower()} is in the word.")
 
     def ask_for_input(self):
         while True:
-            guess = input("Guess one letter!:\n")
+            guess = input("Guess one letter!:")
             if guess.isalpha() and len(guess) > 1:
-                print("Invalid letter. Please, enter a single alphabetical character.\n")            
+                print("Invalid letter. Please, enter a single alphabetical character.")            
             elif guess in self.list_of_guesses:
-                print("You already tried this letter!\n")
+                print("You already tried this letter!")
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
