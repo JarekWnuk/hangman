@@ -9,7 +9,6 @@ class Hangman:
         for letter in self.word:
             self.word_guessed.append("_")
         self.list_of_guesses = []
-        self.ask_for_input()
 
     def check_guess(self, guess):
         if guess.lower() in self.word:
@@ -25,3 +24,5 @@ class Hangman:
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
+player_1 = Hangman(["apple"])
+player_1.ask_for_input()
