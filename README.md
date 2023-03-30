@@ -105,3 +105,19 @@ if the letter guessed is incorrect the player loses a life and gets a message
 # Conclusion
 Using abstraction improved the code, making it easier to see the main functions.
 The game is almost finished. The remaining task will be to create the logic that will run the game with the use of the game class.
+
+# Milestone 5
+Function play_game creates an instance of the Hangman class and defines the initial number of lives.
+The list of secret words needs to be passed as an argument.
+
+With the use of an infinite loop with break points the play_game function does the following:
+
+- checks if the player has any lives left, if not game is lost (class attribute: num_lives)
+
+- checks if there are any hidden letters left, if there are then asks the player to guess a letter (class method: ask_for_input)
+
+- otherwise the game is won (lives left > 0 and hidden letters = 0)
+
+# Conclusion
+All of the required logic has been implemented. The Hangman game is now complete and ready to play.
+

@@ -17,10 +17,12 @@ class Hangman:
                 if letter == guess.lower():                 # converts the guessed letter to lowercase
                     self.word_guessed[count] = letter       # replaces the underscore in the secret word list with the guessed letter
             self.num_letters -= 1                           # reduces the number of unique letters that remain hidden
+            print(" ".join(self.word_guessed))
         else:
             self.num_lives -= 1
             print(f"Sorry, {guess.lower()} is not in the word.")
             print(f"You have {self.num_lives} lives left.")
+            print(" ".join(self.word_guessed))
 
     def ask_for_input(self):        
         while True:
@@ -31,7 +33,7 @@ class Hangman:
                 print("You already tried that letter!")
             else:
                 self.check_guess(guess)
-                self.list_of_guesses.append(guess)          #adds the guessed letter to a list of previous guesses
+                self.list_of_guesses.append(guess)          #adds the guessed letter to a list of previous guesses                 
                 break
 def play_game(word_list):                                   # function that contains logic for running the game
     num_lives = 4
