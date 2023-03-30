@@ -34,10 +34,10 @@ class Hangman:
                 self.list_of_guesses.append(guess)
                 break
 def play_game(word_list):
-    num_lives = 5
+    num_lives = 4
     game = Hangman(word_list, num_lives)
     while True:
-        if num_lives == 0:
+        if game.num_lives == 0:
             print("You lost!")
             break
         elif game.num_letters > 0:
